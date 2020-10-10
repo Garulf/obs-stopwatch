@@ -16,13 +16,8 @@ def timed(sec):
     sec = sec % 60
     hours = mins // 60
     mins = mins % 60
-    if sec < 10:
-        sec = '0' + str(int(sec))
-    if mins < 10:
-        mins = '0' + str(mins)
-    if hours < 10:
-        hours = '0' + str(hours)
-    return "{0}:{1}:{2}".format(hours, mins, sec)
+
+    return "{:02d}:{:02d}:{:02d}".format(hours, mins, sec)
 
 
 def stopwatch():
